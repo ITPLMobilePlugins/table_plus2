@@ -1,7 +1,8 @@
 name: table_plus
 description: Plugin supports for table search
-version: 1.0.1
-homepage:
+version: 0.0.1
+homepage: https://github.com/ITPLMobilePlugins/table_plus2
+repository: https://github.com/ITPLMobilePlugins/table_plus2
 
 environment:
   sdk: ">=2.15.1 <3.0.0"

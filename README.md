@@ -1,6 +1,6 @@
 # table_plus
 
-Plugin supports for table search
+Plugin supports for table search, CSV export functionality
 
 ## Getting Started
 
