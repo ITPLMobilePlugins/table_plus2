@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:table_plus/table_plus.dart';
+import 'package:table_plus2/table_plus.dart';
 
 void main() {
   runApp(const MyApp());
