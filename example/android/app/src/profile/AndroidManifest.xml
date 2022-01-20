@@ -2,5 +2,7 @@
     package="com.impiger.testplus.table_plus_example">
     <!-- Flutter needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
-    -->
+    --><uses-permission android:name="android.permission.INTERNET"/>
+
+
 </manifest>
