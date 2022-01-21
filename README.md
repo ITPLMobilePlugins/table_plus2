@@ -1,4 +1,4 @@
-# table_plus
+# table_plus2
 
 Plugin supports for table search, CSV export functionality.
 
