@@ -71,8 +71,9 @@ Screenshots
 
 ![MicrosoftTeams-image](https://user-images.githubusercontent.com/98092344/150472876-e8d74426-720b-49eb-a02c-f97551951525.png)
 
+**Web with Search Functionality**
 
-
+![MicrosoftTeams-image (3)](https://user-images.githubusercontent.com/98092344/150473503-5125d807-32a6-4efc-8943-63ed28d51465.png)
 
 
 
