@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var searchNameList = <dynamic>[];
-  final bool isSearchEnabled = false;
+  final bool isSearchEnabled = true;
   List<Widget> searchCtrl = <Widget>[];
   List<String> tableHeading = <String>[];
 
