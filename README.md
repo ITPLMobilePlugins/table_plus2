@@ -55,3 +55,13 @@ We can enable/disable the search bar in UI itself.​
 We have Export option to export the table into excel format.​
 
 These features are currently available in three platform ANDROID, iOS, WEB.​
+
+---------------------------------------------------------
+Screenshots
+
+![MicrosoftTeams-image (1)](https://user-images.githubusercontent.com/98092344/150471559-1c4695c8-96a3-43fd-9e85-04c0a840fddc.png)
+
+
+
+
+
