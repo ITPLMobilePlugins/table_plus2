@@ -59,7 +59,20 @@ These features are currently available in three platform ANDROID, iOS, WEB.​
 ---------------------------------------------------------
 Screenshots
 
+**Android**
+
 ![MicrosoftTeams-image (1)](https://user-images.githubusercontent.com/98092344/150471559-1c4695c8-96a3-43fd-9e85-04c0a840fddc.png)
+
+**iOS**
+
+![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/98092344/150472838-1fa04cfe-f9f6-4c25-bd43-530c3d443579.png)
+
+**Web**
+
+![MicrosoftTeams-image](https://user-images.githubusercontent.com/98092344/150472876-e8d74426-720b-49eb-a02c-f97551951525.png)
+
+
+
 
 
 
