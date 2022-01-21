@@ -1,6 +1,6 @@
 name: table_plus2
 description: Plugin supports for table search and export option to export csv file, It gives you a column wise search functionality, with user customizable search controller. We can enable/disable the search bar in UI itself. These features are currently available in three platform ANDROID, iOS, WEB. Table plus Plugin will provide search implementation with user customizable search controller. This plugin is available in the link - https://pub.dev/packages/table_plus2. This plugin will further provide support for Desktop, it is in progress.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/ITPLMobilePlugins/table_plus2
 repository: https://github.com/ITPLMobilePlugins/table_plus2
 
