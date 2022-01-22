@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:table_plus2/table_plus.dart';
 
@@ -58,6 +57,16 @@ class _MyAppState extends State<MyApp> {
                 Text(objData.lastName),
                 showEditIcon: false,
                 placeholder: false,
+              ),
+              DataCell(
+                Text(objData.age.toString()),
+                showEditIcon: false,
+                placeholder: false,
+              ),
+              DataCell(
+                Text(objData.mobileNumber.toString()),
+                showEditIcon: false,
+                placeholder: false,
               )
             ],
           ),
@@ -72,23 +81,42 @@ class _MyAppState extends State<MyApp> {
     tableHeading.clear();
     tableHeading.add("First Name");
     tableHeading.add("Second Name");
+    tableHeading.add("Age");
+    tableHeading.add("Mobile Number");
 
     for (var index = 0; index < tableHeading.length; index++) {
       searchCtrl.add(CustomSearchTextFieldWidget(
         onChangedFunctions: (String value, TextEditingController controller) {
-          if (kDebugMode) {
-            print(value);
-          }
           List<dynamic> searchList = <dynamic>[];
 
           if (value.isNotEmpty) {
             searchList.clear();
             for (int i = 0; i < names.length; i++) {
-              String data = index == 0 ? names[i].firstName : names[i].lastName;
-              Name nameData = names[i];
-              if (data.toLowerCase().contains(value.toLowerCase())) {
-                searchList.add(nameData);
+              if (index == 0 || index == 1) {
+                String data =
+                    index == 0 ? names[i].firstName : names[i].lastName;
+                Name nameData = names[i];
+                if (data.toLowerCase().contains(value.toLowerCase())) {
+                  searchList.add(nameData);
+                }
+              } else if (index == 2) {
+                int age = names[i].age;
+                Name nameData = names[i];
+                if (age.toString().contains(value)) {
+                  searchList.add(nameData);
+                }
+              } else if (index == 3) {
+                int mobileNumber = names[i].mobileNumber;
+                Name nameData = names[i];
+                if (mobileNumber.toString().contains(value)) {
+                  searchList.add(nameData);
+                }
               }
+              // String data = index == 0 ? names[i].firstName : names[i].lastName;
+              // Name nameData = names[i];
+              // if (data.toLowerCase().contains(value.toLowerCase())) {
+              //   searchList.add(nameData);
+              // }
             }
             setState(() {
               searchNameList = searchList;
@@ -107,7 +135,6 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
@@ -136,21 +163,33 @@ class _MyAppState extends State<MyApp> {
   }
 
   var names = <Name>[
-    Name(firstName: "Aakav", lastName: "Kumar"),
-    Name(firstName: "Aakash", lastName: "Tewari"),
-    Name(firstName: "Rohan", lastName: "Singh"),
-    Name(firstName: "rajesh", lastName: "babu"),
-    Name(firstName: "ajeeth", lastName: "balaji"),
-    Name(firstName: "raj", lastName: "kumar"),
-    Name(firstName: "mohan", lastName: "raj"),
-    Name(firstName: "sundar", lastName: "jo"),
-    Name(firstName: "veera", lastName: "sundar"),
+    Name(
+        firstName: "Aakav",
+        lastName: "Kumar",
+        age: 22,
+        mobileNumber: 9087694590),
+    Name(
+        firstName: "Aakash",
+        lastName: "Tewari",
+        age: 23,
+        mobileNumber: 9994628319),
+    Name(
+        firstName: "Rohan",
+        lastName: "Singh",
+        age: 24,
+        mobileNumber: 99524018412),
   ];
 }
 
 class Name {
   String firstName;
   String lastName;
+  int age;
+  int mobileNumber;
 
-  Name({required this.firstName, required this.lastName});
+  Name(
+      {required this.firstName,
+      required this.lastName,
+      required this.age,
+      required this.mobileNumber});
 }
