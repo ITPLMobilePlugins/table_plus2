@@ -1,5 +1,5 @@
 name: table_plus
-description: Plugin supports for table search and export option to export csv file, It gives you a column wise search functionality, with user customizable search controller. We can enable/disable the search bar in UI itself.
+description: The plugin supports the table search and export option to export CSV files.
 version: 1.0.5
 homepage: https://github.com/ITPLMobilePlugins/table_plus2
 repository: https://github.com/ITPLMobilePlugins/table_plus2
