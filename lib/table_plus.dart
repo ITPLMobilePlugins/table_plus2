@@ -77,7 +77,11 @@ class _TablePlusState extends State<TablePlus> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(child: SingleChildScrollView(child: bodyData())),
+        Expanded(
+            child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal, child: bodyData()))),
         Visibility(
           visible: widget.isExportCSVEnabled,
           child: Padding(
@@ -94,14 +98,16 @@ class _TablePlusState extends State<TablePlus> {
     );
   }
 
-  Widget bodyData() => DataTable(
-      columnSpacing: widget.columnSpacing,
-      headingRowHeight: widget.isSearchEnabled ? 130.0 : 56.0,
-      onSelectAll: widget.onSelectAll,
-      sortColumnIndex: widget.sortColumnIndex,
-      sortAscending: widget.sortAscending,
-      columns: widget.columns,
-      rows: widget.rows);
+  Widget bodyData() {
+    return DataTable(
+        columnSpacing: widget.columnSpacing,
+        headingRowHeight: widget.isSearchEnabled ? 130.0 : 56.0,
+        onSelectAll: widget.onSelectAll,
+        sortColumnIndex: widget.sortColumnIndex,
+        sortAscending: widget.sortAscending,
+        columns: widget.columns,
+        rows: widget.rows);
+  }
 
   Future<bool> externalStoragePermission() async {
     var status1 = await Permission.manageExternalStorage.status;
@@ -268,7 +274,8 @@ class _CustomSearchTextFieldWidgetState
       margin: const EdgeInsets.only(top: 30.0, bottom: 10.0),
       child: TextFormField(
         controller: _nameController,
-        onChanged: (value) => widget.onChangedFunctions(value, _nameController),
+        onChanged: (value) =>
+            widget.onChangedFunctions(value, _nameController, widget.index),
         decoration: const InputDecoration(hintText: "Search..."),
         validator: (v) {
           if (v!.trim().isEmpty) return 'Please enter something';

@@ -12,7 +12,7 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 class TablePlusWeb {
   static void registerWith(Registrar registrar) {
     final MethodChannel channel = MethodChannel(
-      'table_plus2',
+      'table_plus',
       const StandardMethodCodec(),
       registrar,
     );

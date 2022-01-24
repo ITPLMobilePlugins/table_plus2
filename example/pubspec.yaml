@@ -18,7 +18,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  table_plus2:
+  table_plus:
     # When depending on this package from a real application you should use:
     #   table_plus: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints

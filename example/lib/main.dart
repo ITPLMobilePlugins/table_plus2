@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:table_plus2/table_plus.dart';
+import 'package:table_plus/table_plus.dart';
 
 void main() {
   runApp(const MyApp());
@@ -86,7 +86,8 @@ class _MyAppState extends State<MyApp> {
 
     for (var index = 0; index < tableHeading.length; index++) {
       searchCtrl.add(CustomSearchTextFieldWidget(
-        onChangedFunctions: (String value, TextEditingController controller) {
+        onChangedFunctions:
+            (String value, TextEditingController controller, int position) {
           List<dynamic> searchList = <dynamic>[];
 
           if (value.isNotEmpty) {
